@@ -189,3 +189,62 @@ hr {
     border-top: 1px solid #1a1a1a;
     margin: 24px 0;
 }
+
+/* ===== CONTACT FORM ===== */
+
+/* "Get in touch" heading. */
+.contact-heading {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 40px 0 16px;
+}
+
+/* The form: stack fields vertically with even spacing. */
+.contact-form {
+    display: flex;
+    flex-direction: column;         /* fields stack top-to-bottom */
+    gap: 16px;
+    max-width: 480 px;              /* keeps the form from getting too wide */
+}
+
+/* Each lable: small uppercase text above its input. */
+.contact-form label {
+    display: flex;
+    flex-direction: column;         /* label text sits above the box */
+    gap: 4px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+/* The input boxes & textarea: match the monospace, cream, hard-border look. */
+.contact-form input,
+.contact-form textarea {
+    font-family: inherit;           /* monospace, like the rest of the site */
+    font-size: 14px;
+    color: #1a1a1a;
+    background: #f4f1ea;          /* same cream as the page */
+    border: 1px solid #1a1a1a;
+    padding: 8px 10px;
+}
+
+/* The textarea: don't let it be resized sideways. */
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* The send button: inverted (black fill), like the active filter. */
+.contact-form button {
+    font-family: inherit;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #1a1a1a;
+    color: #f4f1ea;
+    border: 1px solid #1a1a1a;
+    padding: 8px 16px;
+    cursor: pointer;
+    align-self: flex-start;        /* button only as wide as its text, not full-width */
+}
