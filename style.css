@@ -1,0 +1,191 @@
+/* =======================================================================
+    JOYCE NOH - PORTFOLIO STYLES
+    One shared stylesheet for the whole site.
+    Sections:
+        1. Foundation
+        2. Header (name + nav, shared across pages)
+        3. Filter bag (homepage)
+        4. Archive list (homepage)
+        5. Project detail page header
+        6. Divider
+   ======================================================================= */
+
+/* ===== FOUNDATION ===== */
+/* The whole page: cream paper, black ink, monospace type,
+   centered in a narrow readable column. */
+body {
+    background: #f4f1ea;
+    color: #1a1a1a;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 800px;       /* keeps the column narrow & readable */
+    margin: 40px auto;      /* centers the page horizontally, adds top/bottom space */
+    padding: 0 20px;
+}
+
+/* Links: black, underlined - classic, restrained. */
+a {
+    color: #1a1a1a;
+}
+
+/* ===== HEADER (no-frame Swiss) ===== 
+   Name on the left, nav on the right, hairline underneath.
+   Shared by every page. */
+.site-header {
+    display: flex;                      /* puts name & nav on one row */
+    justify-content: space-between;     /* pushes them to opposite ends of the row */
+    align-items: center;
+    border-bottom: 1px solid #1a1a1a; /* thin black line under header */
+    padding-bottom: 8px;
+}
+
+/* The name/logo (a link on sub-pages, back to home). */
+.logo {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;          /* JOYCE NOH */
+    text-decoration: none;              /* removes default underline from links */
+}
+
+/* Nav links: small, spaced, uppercase. */
+.site-nav a {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;          /* INDEX, ABOUT */
+    margin-left: 14px;                  /* space between nav links */
+}
+
+/* ===== FILTER BAR (homepage) =====
+   The clickable ALL / DESIGN / ENGINEERING / OTHER buttons. */
+.filters {
+    margin: 20px 0;
+    display: flex;
+    gap: 6px;
+}
+.filter {
+    font-family: inherit;               /* match the monospace */
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;          /* ALL, ENGINEERING, DESIGN, OTHER */
+    background: transparent;
+    color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    padding: 2px 10px;
+    cursor: pointer;                    /* shows a clickable hand */
+}
+/* The currently-selected filter: inverted (black fill). */
+.filter.is-active {
+    background: #1a1a1a;
+    color: #f4f1ea;
+}
+
+/* ===== ARCHIVE LIST (homepage)=====
+   Year-grouped list of projects, each row title + tag. */
+.year {
+    font-size: 11px;
+    font-weight: normal;
+    color: #999;                     /* quiet grey year divider */
+    margin: 22px 0 6px;
+}
+.project {
+    border-bottom: 1px dotted #bbb;  /* hairline between rows */
+}
+.project-title {
+    text-transform: uppercase;
+}
+/* Each project row: title left, tag right. */
+.project-link {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;             /* removes default underline from links */
+    padding: 6px 0;
+}
+.project-title {
+    text-transform: uppercase;
+}
+.project-tag {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #777;                     /* tag is quieter than title */
+}
+
+/* ===== PROJECT DETAIL PAGE HEADER =====
+   Title block on the left, metadata block on the right. */
+
+/* Adds breathing room above the project content so it sits balanced
+   between the header line and the divider. */
+.project-page {
+    margin-top: 28px;
+}
+
+/* Puts the title block and metadata block side by side. */
+.project-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;                       /* tops line up */
+    gap: 24px;
+}
+
+/* The big project title. */
+.project-heading {
+    text-transform: uppercase;
+    margin: 0 0 6px 0;                             /* tight gap to the subtitle below */
+}
+
+/* The one-line subtitle, snug under the title. */
+.project-subtitle {
+    font-size: 12px;
+    color: #555;
+    max-width: 320px;                              /* keeps subtitle from getting too wide */
+    margin: 0;
+}
+
+/* The metadata list: two left-aligned columns (labels | values),
+   sitting on the right side of the header row. */
+.project-meta {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto;              /* column 1 = labels, column 2 = values */
+    gap: 6px 24px;                                 /* 6px between rows, 24px between columns */
+    font-size: 11px;
+    align-content: start;                          /* text reads left-to-right */
+}
+.project-meta dt {
+    color: #999;                                 /* labels are quiet grey */
+    text-transform: uppercase;
+    text-align: left;
+}
+.project-meta dd {
+    margin: 0;                                     /* remove dd's default left indent */
+    text-align: left;
+}
+/* Body images: never wider than the column, keep proportions. */
+.project-page img {
+    width: 100%;                                   /* fill the column fully, edge to edge */
+    height: auto;                                  /* scale height proportionally, no distortion */
+    display: block;                                /* sits on its own line, not inline with text */
+    margin: 20px 0;                                /* breathing room above and below */
+}
+/* Section headings in the project body. */
+.project-page h2 {
+    font-size: 15px;
+    text-transform: uppercase;                     /* matches the terminal-label feel */
+    letter-spacing: 0.5px;
+    margin: 32px 0 8px;                            /* lots of space above, little below */
+}
+/* Pulled-out quote / callout style. */
+.project-page blockquote {
+    margin: 24px 0;
+    padding-left: 16px;
+    border-left: 2px solid #1a1a1a;              /* a vertical rule on the left */
+    color: #555;                                 /* slightly quieter than body text */
+}
+
+/* ===== DIVIDER =====
+   The <hr> line: clean and full-width. */
+hr {
+    border: none;
+    border-top: 1px solid #1a1a1a;
+    margin: 24px 0;
+}
