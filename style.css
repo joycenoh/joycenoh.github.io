@@ -248,3 +248,40 @@ hr {
     cursor: pointer;
     align-self: flex-start;        /* button only as wide as its text, not full-width */
 }
+
+/* ===== OLD-WEB FLOURISHES ===== */
+
+.ascii-divider {
+    font-size: 13px;
+    line-height: 1.3;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 24px 0;
+    overflow-x: auto;              /* if it's too wide on mobile, scroll rather than break */
+}
+
+/* Scrolling ticker. */
+/* @keyframes — a CSS animation. It defines a motion from a start state (from) to an end state (to),
+   and the animation property on .marquee-track plays it. Breaking down animation: scroll-left 20s
+   linear infinite: scroll-left is the keyframes name, 20s is how long one pass takes (bigger = slower),
+   linear means constant speed (no easing), infinite means loop forever. translateX slides the element
+   horizontally — from 60% right to 100% left, so the text travels across and repeats. */
+.marquee {
+    background: #1a1a1a;
+    color: #f4f1ea;
+    overflow: hidden;              /* hide text that's outside the bar */
+    white-space: nowrap;           /* keep it all on one line */
+    padding: 8px 0;
+    margin: 16px 0;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.marquee-track {
+    display: inline-block;
+    animation: scroll-left 30s linear infinite;       /* the movement */
+}
+/* Defines the actual motion: slide from right to left, forever. */
+@keyframes scroll-left {
+    from { transform: translateX(60%); }
+    to   { transform: translateX(-100%); }
+}
