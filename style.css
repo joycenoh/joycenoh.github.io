@@ -178,7 +178,7 @@ a {
 .project-page blockquote {
     margin: 24px 0;
     padding-left: 16px;
-    border-left: 2px solid #1a1a1a;              /* a vertical rule on the left */
+    border-left: 2px solid #999;              /* a vertical rule on the left */
     color: #555;                                 /* slightly quieter than body text */
 }
 
