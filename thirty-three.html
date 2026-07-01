@@ -21,19 +21,21 @@
     <!-- Project content -->
     <main class="project-page">
 
-        <!-- HEADER ROW: titles on the left, metadata on the right -->
+        <!-- HEADER ROW: titles on the left, metadata on the right
+             The flexbox that arranges these two side by side lives in
+             .project-header-row in style.css. -->
         <div class="project-header-row">
             <div class="project-titles">
                 <h1 class="project-heading">Thirty Three and a Third</h1>
-                <p class="project-subtitle">Subtitle goes here</p>
+                <p class="project-subtitle">A home-cafe series where coffee, matcha, and vinyl bring people together</p>
             </div>
 
             <!-- Metadata block -->
             <dl class="project-meta">
-                <dt>Year</dt><dd>2023</dd>
+                <dt>Year</dt><dd>2024-Present</dd>
                 <dt>Discipline</dt><dd>Other</dd>
-                <dt>Role</dt><dd>Cafe Owner and Barista</dd>
-                <dt>Links</dt><dd><a href="Link goes here">Website ↗</a></dd>
+                <dt>Role</dt><dd>Founder &amp; Host</dd>
+                <dt>Tools</dt><dd>Espresso, matcha, records</dd>
             </dl>
 
         </div>
@@ -41,27 +43,94 @@
         <hr>
 
         <!-- Body: write freely from here. Examples of each content type: -->
+
+        <!-- ===== LOGO HERO =====
+             A single centered graphic in a CLEAN (solid) border. Styles by .cafe-hero in style.css. -->
         
-        <p>Opening paragraph. Set up the project - what it was, why it mattered, what you were brought in to do.</p>
+        <div class="cafe-hero">
+            <img src="images/cafe-logo.jpg" alt="Thirty Three and a Third logo: a vinyl record with epresso steam rising from a cup in its center">
+        </div>
+
+        <!-- ===== ORIGIN STORY ===== -->
+        
+        <p>It started, honestly, with an engineering obsession — and a scale. Before I owned a single machine, 
+           I bought the <a href="https://subminimal.com/products/subscale">SubMinimal Subscale</a>, and I loved everything 
+           about it: the aesthetic, the digital innovation, the sleek look. I always knew I wanted an espresso machine, but those are expensive, 
+           so I started small — just to kickstart the momentum and the excitement.</p>
+
+        <h2>The coffee</h2>
+        <p>Then I fell all the way down the rabbit hole. As a mechanical engineer, I started <em>obsessing</em> over coffee machine brands — 
+           my entire Instagram feed became routine videos, setup builds, tips and tricks, machines, everything. I loved the engineering: the 
+           machine itself, the grinder, the way grind size changes the pull and has to shift for different coffees. (Can you tell I geeked out?) 
+           My favorite brands became Fellow, La Marzocco, Lelit, and the Rocket Appartamento — these espresso machines are genuine engineering marvels 
+           and a real joy to me. The Fellow especially: the DIY, programmable side is like nothing else — you can tune any and every variable exactly 
+           how you want. The others win on aesthetics and the sheer thought behind the pulling process (and, obviously, on price…).</p>
+
+        <p>Eventually I built my own setup: a <strong>Fellow Stagg gooseneck kettle</strong>, a <strong>Breville Bambino Plus</strong> espresso machine, 
+           a <strong>Fellow Opus conical burr grinder</strong> (a gift from my boyfriend), and a <strong>Fellow Atmos vacuum canister</strong> to keep 
+           the beans fresh. That became the official bar.</p>
  
-        <h2>The challenge</h2>
-        <p>A section with a heading. Explain the problem you faced.</p>
+        <p>But the gear alone wouldn't have made me open my home. It came from the whole stack of loves at once: the coffee itself, the creativity of 
+           inventing drinks and house-made syrups (my love of cooking, sneaking in), the engineering in every piece of equipment, and the quiet of the 
+           routine. And — practically — making my own is so much more delicious <em>and</em> cost-saving than buying out.</p>
+ 
+        <h2>The matcha</h2>
+        <p>The same obsession took over matcha. I care about the physics of it: the powder-to-water ratio, the exact water temperature, the method 
+           for pulling a proper microfoam — and the bowl itself. The shape, size, and texture of the chawan genuinely change the drink. I have two 
+           very different ones: one fully glazed, smooth, with a spout; the other glazed only on the lip and outside, so the inside and bottom stay 
+           rough. I think the rough one makes better matcha — the texture introduces more air as you whisk. Thinking this hard about form and surface 
+           is exactly what pulled me into <a href="pottery.html">pottery</a>, which is becoming a real and valued hobby of its own.</p>
+ 
+        <h2>The music</h2>
+        <p>And then the records — which I genuinely geek over too. I love the simplicity of the player, but the science floors me: grooves cut into 
+           vinyl, read as vibrations by a needle, turned back into music. That it was discovered and engineered so <em>early</em> is astonishing to me. 
+           My boyfriend got me into it, and we've built a collection across every genre for the love of physical media — dropping a needle, flipping a 
+           record. My setup is an <strong>Audio-Technica AT-LP60X</strong> belt-drive turntable paired with a Bose speaker set. The name of the whole 
+           thing comes from here: 33⅓, the speed a record spins.</p>
 
-        <!-- Image. Put image files in an "images" folder. -->
-        <img src="images/yondr-1.jpg" alt="Description of the image">
+        <!-- ===== HOSTING PHOTO (framed snapshot) ===== -->
+        <figure class="cafe-snapshot">
+            <img src="images/cafe-setup.jpg" alt="The espresso setup, coffee beans, and a record player in the background">
+            <figcaption>&#9749; a session in progress &#9749;</figcaption>
+        </figure>
 
-        <h2>What I did</h2>
-        <p>Another section. You can use a bulleted list for specifics:</p>
-        <ul>
-            <li>Ownded product direction in a Head-of-Product vacuum</li>
-            <li>Built out QA/QC and RF signal-blocking testing</li>
-            <li>Managed vendors and supply chain</li>
-        </ul>
+        <!-- ===== THE THIRD SPACE ===== -->
+        <h2>The third space</h2>
+        <p>Inspired by a friend's home-cafe series in Chicago, I wanted to share all of it — the creativity, the ritual, the smells and tastes — 
+           with my friends, and to have them bring <em>their</em> friends. Making a new connection gets harder after college, so the whole idea is 
+           a third space: somewhere you can gather, meet someone new, or just exist and unwind for a while. I run the bar; my boyfriend runs the 
+           music (unless there's a big game on — then the shared love of sports wins).</p>
 
-        <!-- A quote/callout -->
-        <blockquote>A pulled-out highlight or reflection goes here.</blockquote>
+        <!-- ===== GALLERY (playful dashed borders) ===== -->
+        <div class="cafe-gallery">
+            <figure>
+                <img src="images/cafe-menu.jpg" alt="Hand-drawn chalkboard menu for Thirty Three and a Third, decorated for the holidays">
+                <figcaption>the december menu</figcaption>
+            </figure>
+            <figure>
+                <img src="images/cafe-drink.jpg" alt="A layered iced strawberry matcha latte beside a to-go cup with the Thirty Three and a Third logo sticker">">
+                <figcaption>strawberry matcha and hot coffee, to go</figcaption>
+            </figure>
+        </div>
 
-        <p>Closing thoughts.</p>
+        <!-- ===== THE MENU ===== -->
+        <h2>The menu</h2>
+        <p>Every menu is hand-drawn on a big chalkboard, and the regulars are named for the vinyl theme — <strong>The A-Side</strong> (classic drip), 
+           <strong>The Double LP</strong> (a double shot), <strong>The House Press</strong> (French press), plus a <strong>Latte Groove</strong> and 
+           a <strong>Cappuccino Spin</strong>. Everything's customizable down to the milk and the house syrups.</p>
+ 
+        <p>The signature drinks are where I get to play, and they rotate with the season. The first cafe, in October, ran an <strong>earl grey sea 
+           salt matcha latte</strong> and an <strong>apple cider latte</strong>; by December they'd turned into a peppermint mocha and a gingerbread 
+           latte. New season, new specials — the regulars stay put.</p>
+ 
+        <blockquote>Three cafes in, the best part isn't the coffee or even the records — it's looking up mid-pour and seeing people who didn't know 
+                    each other an hour ago, talking like they did.</blockquote>
+        
+        <!-- ===== REFLECTION ===== -->
+        <h2>Reflection</h2>
+        <p>Thirty Three and a Third is where a lot of me overlaps at once: the engineer who wants to understand the machine, the cook who wants to 
+           invent the drink, the host who wants the room to feel warm. It's taught me that the same instinct behind good product work — sweating the 
+           details so the experience feels effortless — is exactly what makes a space feel like somewhere people want to stay.</p>
 
         <!-- Back link -->
         <p class="back"><a href="index.html">← Back to index</a></p>
