@@ -368,23 +368,21 @@ hr {
     margin-top: 5px;
 }
 
-/* ===== 11. DENSE PHOTO GRID (for large image sets) =====
-   Auto-flows as many thumbnails per row as fit, then wraps.
-   Works for any number of images (3, 8, 16...). */
+/* ===== 11. PHOTO GALLERY (masonry, 3 columns, uncropped) =====
+   Images keep their natural proportions and flow down each
+   column, packing tightly like a magazine layout. */
 .photo-grid {
-  display: grid;
-  /* Each column is at least 140px; the grid fits as many as it can
-     and shares leftover space. 'auto-fill' is what makes it wrap. */
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 8px;
+  column-count: 3;          /* three columns */
+  column-gap: 8px;          /* space between columns */
   margin: 20px 0;
 }
 .photo-grid img {
-  width: 100%;
-  height: 140px;          /* uniform thumbnail height... */
-  object-fit: cover;      /* ...crop to fill, no distortion */
+  width: 100%;              /* fill the column width... */
+  height: auto;            /* ...and scale height naturally (no crop) */
+  display: block;
+  margin: 0 0 8px 0;        /* vertical gap between stacked images */
   border: 1px solid #1a1a1a;
   background: #fff;
-  display: block;
-  margin: 0;
+  /* Keeps an image from being split across two columns: */
+  break-inside: avoid;
 }
