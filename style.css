@@ -12,6 +12,7 @@
         8. Contact Form
         9. Old-web flourishes (ASCII dividers, marquee)
         10. Cafe page images (hero, snapshot, gallery)
+        11. Dense photo grid
    ======================================================================= */
 
 /* ===== 1. FOUNDATION ===== */
@@ -365,4 +366,25 @@ hr {
     color: #777;
     letter-spacing: 1px;
     margin-top: 5px;
+}
+
+/* ===== 11. DENSE PHOTO GRID (for large image sets) =====
+   Auto-flows as many thumbnails per row as fit, then wraps.
+   Works for any number of images (3, 8, 16...). */
+.photo-grid {
+  display: grid;
+  /* Each column is at least 140px; the grid fits as many as it can
+     and shares leftover space. 'auto-fill' is what makes it wrap. */
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+  margin: 20px 0;
+}
+.photo-grid img {
+  width: 100%;
+  height: 140px;          /* uniform thumbnail height... */
+  object-fit: cover;      /* ...crop to fill, no distortion */
+  border: 1px solid #1a1a1a;
+  background: #fff;
+  display: block;
+  margin: 0;
 }
