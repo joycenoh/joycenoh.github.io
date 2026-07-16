@@ -14,6 +14,7 @@
         10. Cafe page images (hero, snapshot, gallery)
         11. Dense photo grid
         12. Flow chain diagram
+        13. Site footer
    ======================================================================= */
 
 /* ===== 1. FOUNDATION ===== */
@@ -410,4 +411,14 @@ hr {
   color: #999;              /* the connecting arrows, quiet grey */
   font-size: 16px;
   line-height: 1;
+}
+
+/* ===== 13. SITE FOOTER ===== */
+.site-footer {
+  text-align: center;
+  font-size: 11px;
+  color: #999;
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid #1a1a1a;
 }
