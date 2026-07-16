@@ -14,7 +14,6 @@
         10. Cafe page images (hero, snapshot, gallery)
         11. Dense photo grid
         12. Flow chain diagram
-        13. Mobile (screens 600px and narrower)
    ======================================================================= */
 
 /* ===== 1. FOUNDATION ===== */
@@ -411,15 +410,4 @@ hr {
   color: #999;              /* the connecting arrows, quiet grey */
   font-size: 16px;
   line-height: 1;
-}
-
-/* ===== 13. MOBILE (screens 600px and narrower) ===== */
-@media (max-width: 600px) {
-
-  /* ASCII header: shrink to fit, stay centered, no sideways scroll. */
-  .ascii-divider {
-    font-size: 9px;        /* smaller so the whole box fits the screen */
-    overflow-x: hidden;    /* no more left-right scrolling */
-  }
-
 }
