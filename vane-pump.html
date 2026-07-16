@@ -30,10 +30,11 @@
 
             <!-- Metadata block -->
             <dl class="project-meta">
-                <dt>Year</dt><dd>2021</dd>
+                <dt>Year</dt><dd>2022</dd>
                 <dt>Discipline</dt><dd>Engineering</dd>
-                <dt>Role</dt><dd>Product & Mechanical Engineering</dd>
-                <dt>Links</dt><dd><a href="enter link here">Website ↗</a></dd>
+                <dt>Role</dt><dd>Mechanical Design Engineer</dd>
+                <dt>Tools</dt><dd>Fusion 360, FDM printing</dd>
+                <dt>Lab</dt><dd>MIT GEAR Lab</dd>
             </dl>
 
         </div>
@@ -42,18 +43,94 @@
 
         <!-- Body: write freely from here. Examples of each content type: -->
         
-        <!-- ===== "UNDER CONSTRUCTION" STUB =====
-             An ASCII banner (in <pre> to preserve exact spacing) plus a
-             short note. Replace all of this with real content later. -->
-
-        <pre class="ascii-construction">
-        ┌─────────────────────────────────────┐
-        │       *  UNDER CONSTRUCTION  *      │
-        │     this page is still loading.     │
-        └─────────────────────────────────────┘
-        </pre>
+        <!-- HERO IMAGE -->
+        <figure class="cafe-snapshot">
+            <img src="images/vane/vp-1.png" alt="CAD model of the flexural vane pump design">
+            <figcaption>a vane that bends instead of scrapes</figcaption>
+        </figure>
     
-        <p>A page for the Flexural Vane Pump is coming soon.</p>
+        <!-- INTRO -->
+        <p>This project came out of the <a href="https://www.gear.mit.edu/">MIT GEAR Lab</a>, which builds high-performance, 
+           low-cost technology for emerging markets. The target application: desalination — turning seawater into drinkable water, 
+           cheaply enough to matter where it's needed most.</p>
+    
+        <p>A rotary vane pump moves fluid using vanes that slide in and out of a spinning rotor while pressing against the 
+           surrounding stator wall. That contact is everything — any gap leaks and the pump stops working. But the usual way of 
+           maintaining it, through vane geometry and load, creates <em>friction</em> and can cause the vanes to jam. My question 
+           was simple: what if the vane could keep contact with the wall by <strong>bending</strong> instead of scraping? That's 
+           the idea behind a flexural vane — using elastic flexures to hold contact while designing the friction problem away.</p>
+    
+        <p><a href="files/vane-pump-report.pdf">Download the full report ↗</a></p>
+    
+        <h2>Generating designs</h2>
+        <p>I explored four flexure concepts, each a different way to get clean linear motion out of a bending element. Design 1 
+           used eight flexure strips in a single chamber — the most robust motion and the least racking, but the most complex to 
+           build. Design 2 simplified to four strips across two chambers — easier to make, but with less range and more stress 
+           on each strip. Design 3 used two flexure lengths between fixed and free blocks to unlock a large, well-constrained 
+           range of motion. Design 4 took a different path entirely: coils anchoring the vane in two chambers, giving stable motion 
+           and steady wall contact without over-forcing it.</p>
+    
+        <div class="photo-grid">
+            <img src="images/vane/vp-design-1.png" alt="Flexure design concept 1">
+            <img src="images/vane/vp-design-2.png" alt="Flexure design concept 1">
+            <img src="images/vane/vp-design-3.png" alt="Flexure design concept 2">
+            <img src="images/vane/vp-design-4.png" alt="Flexure design concept 3">
+            <img src="images/vane/vp-design-5.png" alt="Flexure design concept 3">
+            <img src="images/vane/vp-design-6.png" alt="Flexure design concept 4">
+            <img src="images/vane/vp-design-7.png" alt="Flexure design concept 4">
+        </div>
+    
+        <h2>Choosing a direction</h2>
+        <p>I judged the concepts against four functional requirements: the vane has to keep contact with the stator wall, minimize 
+           friction on both the channel and the wall, survive the stresses without failing, and stay reasonably simple to make. I picked one 
+           design per flexure type to carry forward — <strong>Design 3</strong> (strips) and <strong>Design 4</strong> (coils) — so I could 
+           compare the two fundamentally different approaches head to head.</p>
+    
+        <h2>CAD & prototyping</h2>
+        <p>I modeled the chosen designs in Fusion 360 and 3D-printed them on a Stratasys Fortus (FDM). Prototyping is where theory meets 
+           reality, and reality had opinions.</p>
+    
+        <div class="photo-grid">
+            <img src="images/vane/vp-cad-1.png" alt="Fusion 360 CAD model">
+            <img src="images/vane/vp-cad-2.png" alt="Fusion 360 CAD model">
+            <img src="images/vane/vp-cad-3.png" alt="Fusion 360 CAD model">
+            <img src="images/vane/vp-cad-4.png" alt="Fusion 360 CAD model">
+            <img src="images/vane/vp-cad-5.png" alt="Fusion 360 CAD model">
+            <img src="images/vane/vp-cad-6.png" alt="Fusion 360 CAD model">
+            <img src="images/vane/vp-cad-7.png" alt="Fusion 360 CAD model">
+            <img src="images/vane/vp-cad-8.png" alt="Fusion 360 CAD model">
+            <img src="images/vane/vp-proto-1.png" alt="3D-printed prototype">
+            <img src="images/vane/vp-proto-2.png" alt="3D-printed prototype">
+            <img src="images/vane/vp-proto-3.png" alt="3D-printed prototype">
+            <img src="images/vane/vp-proto-4.png" alt="3D-printed prototype">
+            <img src="images/vane/vp-proto-5.png" alt="3D-printed prototype">
+            <img src="images/vane/vp-proto-6.png" alt="3D-printed prototype">
+            <img src="images/vane/vp-proto-7.png" alt="3D-printed prototype">
+        </div>
+    
+        <h2>What the prototype taught me</h2>
+        <p>The honest results were the most useful part. The 3D-printed plastic flexure strips didn't behave like the thin metal ones the 
+           concept assumed — under very little strain, they snapped, limiting the vane's motion. Printing the vane as one assembly with 
+           its flexures also meant it couldn't actually be fitted into the rotor. But there were good surprises too: the full assembly 
+           printed stronger and closer to spec than expected, and the coils came out far less stiff than predicted — which, happily, 
+           gave the vane a <em>greater</em> range of motion. The clear next iterations: switch the flexures to thin sheet metal, and print 
+           the vane as separate parts that assemble into the rotor.</p>
+    
+        <blockquote>Until you test it, you don't have a solution — you have a hypothesis. The prototype is where you find out which one you've got.</blockquote>
+    
+        <h2>Reflection</h2>
+        <p>A few lessons stuck with me from this one. First, on communication: I met weekly with my graduate supervisor but kept an 
+           open channel for the in-between moments, and I learned that asking questions isn't weakness — it's boldness. It means you 
+           care enough to do the work right.</p>
+    
+        <p>Second, on research: it's the unglamorous foundation of everything, and it pays off most when you chase it with real 
+           curiosity — I found flexure ideas everywhere from papers to random YouTube videos of the simplest linear mechanisms. 
+           And on ideation, the mantra I keep: brainstorm like a storm — wild, spread out, boundless. My best ideas rarely come 
+           from staring at the problem; they come from noticing the mundane in daily life, from sports and fashion and nature, from 
+           things that seemed unrelated until suddenly they weren't.</p>
+    
+        <p>And finally, testing. You can do all the theory, modeling, and research in the world, but until you put a design in a machine 
+           or in someone's hands, you don't know. Test often, test early — it's the only way to find out what to fix.</p>
 
         <!-- Back link -->
         <p class="back"><a href="index.html">← Back to index</a></p>
