@@ -13,6 +13,7 @@
         9. Old-web flourishes (ASCII dividers, marquee)
         10. Cafe page images (hero, snapshot, gallery)
         11. Dense photo grid
+        12. Flow chain diagram
    ======================================================================= */
 
 /* ===== 1. FOUNDATION ===== */
@@ -385,4 +386,28 @@ hr {
   background: #fff;
   /* Keeps an image from being split across two columns: */
   break-inside: avoid;
+}
+
+/* ===== 12. FLOW CHAIN DIAGRAM =====
+   A vertical sequence of boxes joined by arrows. Built from
+   plain HTML so it needs no image file. */
+.flow-chain {
+  display: flex;
+  flex-direction: column;   /* stack the steps vertically */
+  align-items: center;      /* center them in the column */
+  gap: 4px;
+  margin: 24px 0;
+}
+.flow-step {
+  border: 1px solid #1a1a1a;
+  background: #fff;
+  padding: 10px 16px;
+  max-width: 420px;
+  text-align: center;
+  font-size: 13px;
+}
+.flow-arrow {
+  color: #999;              /* the connecting arrows, quiet grey */
+  font-size: 16px;
+  line-height: 1;
 }
